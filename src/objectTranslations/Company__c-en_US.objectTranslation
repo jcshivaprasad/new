@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Company</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Companies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Company ID --></label>
+        <name>Company_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the email ID --></help>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the phone Number --></help>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <relationshipLabel><!-- Companies --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Comapany Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

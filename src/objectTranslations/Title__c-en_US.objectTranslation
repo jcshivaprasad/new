@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Title</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Titles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cast and crew --></label>
+        <name>Cast_and_crew__c</name>
+        <relationshipLabel><!-- Titles --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Enter the language --></help>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <relationshipLabel><!-- Titles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Assets --></label>
+        <name>Number_of_Assets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Photo --></label>
+        <name>Photo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Production end Date --></label>
+        <name>Production_end_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>ReleaseId__c</name>
+        <relationshipLabel><!-- Titles (Release) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <relationshipLabel><!-- Titles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- MovieImage --></label>
+        <name>Thumbnail__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title Image --></label>
+        <name>Title_Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- genre --></label>
+        <name>genre__c</name>
+        <picklistValues>
+            <masterLabel>Animation</masterLabel>
+            <translation><!-- Animation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Horror</masterLabel>
+            <translation><!-- Horror --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Romantic-comedy</masterLabel>
+            <translation><!-- Romantic-comedy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thriller</masterLabel>
+            <translation><!-- Thriller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- isClosed --></label>
+        <name>isClosed__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- invalid date --></errorMessage>
+        <name>production_rule</name>
+    </validationRules>
+</CustomObjectTranslation>

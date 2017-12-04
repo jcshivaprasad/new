@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Asset Concept</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Asset Concepts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Type --></label>
+        <name>Asset_Type__c</name>
+        <picklistValues>
+            <masterLabel>A/V Creative</masterLabel>
+            <translation><!-- A/V Creative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Print Creative</masterLabel>
+            <translation><!-- Print Creative --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Living 1 Sheet</masterLabel>
+            <translation><!-- Living 1 Sheet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Logos</masterLabel>
+            <translation><!-- Logos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TV Spots</masterLabel>
+            <translation><!-- TV Spots --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trailers</masterLabel>
+            <translation><!-- Trailers --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Embargo Date --></label>
+        <name>Embargo_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Embargo Status --></label>
+        <name>Embargo_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Contact --></label>
+        <name>Primary_Contact__c</name>
+        <relationshipLabel><!-- Asset Concepts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <relationshipLabel><!-- Asset Concepts --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Asset Record Type --></label>
+        <name>Asset_Record_Type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Embargo Date is to be entered!! --></errorMessage>
+        <name>Embargo_Date_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

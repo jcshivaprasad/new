@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Asset_Type__c</fullName>
+        <description>Picklist with values as 
+If  A/V then categories are trailers and Tv Spots, else if Print Creative then Living 1 Sheet and Logos</description>
+        <externalId>false</externalId>
+        <label>Asset Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A/V Creative</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Print Creative</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <description>Categories for the types field</description>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Asset_Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Trailers</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>TV Spots</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Living 1 Sheet</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Logos</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>A/V Creative</controllingFieldValue>
+                <valueName>Trailers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>A/V Creative</controllingFieldValue>
+                <valueName>TV Spots</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Print Creative</controllingFieldValue>
+                <valueName>Living 1 Sheet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Print Creative</controllingFieldValue>
+                <valueName>Logos</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Embargo_Date__c</fullName>
+        <description>Gives the date for Embargo. This is a required field if Embargo status is &apos;With Embargo&apos;</description>
+        <externalId>false</externalId>
+        <label>Embargo Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Embargo_Status__c</fullName>
+        <description>Gives the Status of Embargo for the Particular Asset</description>
+        <externalId>false</externalId>
+        <label>Embargo Status</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Embargo_Status_2</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Asset Concepts</relationshipLabel>
+        <relationshipName>Asset_Concepts</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <referenceTo>Title__c</referenceTo>
+        <relationshipLabel>Asset Concepts</relationshipLabel>
+        <relationshipName>Asset_Concept_Objects</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Asset Concept</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Asset_View</fullName>
+        <columns>NAME</columns>
+        <columns>Asset_Type__c</columns>
+        <columns>Embargo_Date__c</columns>
+        <columns>Embargo_Status__c</columns>
+        <columns>Primary_Contact__c</columns>
+        <columns>Title__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Asset_Type__c</field>
+            <operation>equals</operation>
+            <value>A/V Creative</value>
+        </filters>
+        <filters>
+            <field>Embargo_Status__c</field>
+            <operation>equals</operation>
+            <value>With Embargo</value>
+        </filters>
+        <label>Asset View</label>
+    </listViews>
+    <nameField>
+        <label>Asset Concept Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Asset Concepts</pluralLabel>
+    <recordTypes>
+        <fullName>Asset_Record_Type</fullName>
+        <active>true</active>
+        <description>this is a record type which gives different page layouts for A/V creative and print creative</description>
+        <label>Asset Record Type</label>
+        <picklistValues>
+            <picklist>Asset_Type__c</picklist>
+            <values>
+                <fullName>A%2FV Creative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print Creative</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Living 1 Sheet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TV Spots</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trailers</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Embargo_Status_2</picklist>
+            <values>
+                <fullName>Embargo with no further notice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Embargo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>With Embargo</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Embargo_Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Embargo_Date_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF( ISPICKVAL( Embargo_Status__c , &quot;With Embargo&quot;) ,  ISBLANK( Embargo_Date__c ), NULL)</errorConditionFormula>
+        <errorDisplayField>Embargo_Date__c</errorDisplayField>
+        <errorMessage>Embargo Date is to be entered!!</errorMessage>
+    </validationRules>
+</CustomObject>

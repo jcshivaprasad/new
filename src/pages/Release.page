@@ -1,0 +1,53 @@
+<apex:page standardController="Release__c" sidebar="false" showHeader="false" extensions="T1">
+<title>Movie Marketing Management</title>
+<apex:image value="{!$Resource.banner}" width="100%" height="auto"/>
+    <br/>
+    <hr/>
+    <apex:form >
+    <div align="right">
+    <a href="/secur/logout.jsp" align="right" class="logout">Logout</a></div>
+        <apex:pageMessages />
+       <apex:pageBlock title="New Release" >
+        <table>
+        <tr>
+                <th>Release Date:</th>
+                <td><apex:inputField required="false" value="{!Release__c.Release_Date__c}"/></td>
+            </tr>
+            <tr>
+                <th>Title:</th>
+                <td><apex:inputField required="true" value="{!Release__c.Title__c}"/></td>
+            </tr>
+            <tr>
+                <th>Company:</th>
+                <td><apex:inputField required="false" value="{!Release__c.Company__c}"/></td>
+            </tr>
+            <tr>
+                <th>Territory:</th>
+                <td><apex:inputField required="false" value="{!Release__c.Territory__c}"/></td>
+            </tr>
+            <tr>
+                <td><apex:commandButton value="Create Record" onclick="show_alert()" action="{!save}"/>
+                <apex:commandButton value="Reset Fields" onclick="this.form.reset();return false;"/></td>
+            </tr>
+        </table>
+        
+        </apex:pageblock>
+        <script type="text/javascript"> 
+function show_alert()
+{
+var msg = "The Record's will get Changed? ";
+alert(msg);
+}
+</script>
+</apex:form>
+<apex:form >
+        <apex:pageBlock title="Navigate">
+        <td>
+                <apex:commandButton action="{!Title}" value="Home"/>
+              <!--  <apex:commandButton action="{!Company}" value="Company"/>
+                <apex:commandButton action="{!Language}" value="Language"/> -->
+                <apex:commandButton action="{!Territories}" value="Territory"/></td>
+                </apex:pageBlock>
+        </apex:form>
+
+        </apex:page>

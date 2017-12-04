@@ -1,0 +1,18 @@
+<apex:page standardController="Contact"
+           extensions="bindrecordtypepicklist">
+ <apex:form id="TheForm"> 
+ <apex:pageblock > 
+    <apex:outputLabel > <b>Record Types</b> : </apex:outputLabel> 
+    <apex:selectList size="1" 
+                     value="{!selectedRecordType}"
+                     multiselect="false"> 
+    <apex:selectOptions value="{!RecordTypes }"/> 
+      <apex:actionSupport event="onchange"
+                          action="{!CallContactsEditPage}"
+                          reRender="TheForm"/>
+    </apex:selectList> <br/> 
+  </apex:pageblock> 
+ <h1>You have selected :<apex:outputLabel value="{!selectedRecordType}"
+                                          id="TheForm"/></h1>
+  </apex:form> 
+</apex:page>

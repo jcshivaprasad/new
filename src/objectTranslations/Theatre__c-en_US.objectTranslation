@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Theatre</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Theatres</value>
+    </caseValues>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <relationshipLabel><!-- Theatres --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <relationshipLabel><!-- Theatres --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <relationshipLabel><!-- Theatres --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

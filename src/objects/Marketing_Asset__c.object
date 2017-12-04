@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Asset_Concept__c</fullName>
+        <externalId>false</externalId>
+        <label>Asset Concept</label>
+        <referenceTo>Asset_Concept__c</referenceTo>
+        <relationshipLabel>Marketing Assets</relationshipLabel>
+        <relationshipName>Marketing_Assets</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Asset_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISPICKVAL(Sub_Type__c, &quot;Online&quot;), TRUE, FALSE)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Asset Status</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Available_For_Trade_Event__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Available For Trade Event</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Embargo_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Embargo Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Embargo_Status__c</fullName>
+        <description>it is a picklist consists of with embargo,embargo of no further notice,no embargo</description>
+        <externalId>false</externalId>
+        <label>Embargo Status</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>With Embargo</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Embargo With no further notice</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>No embargo</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Master_Asset__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Master Asset</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Inavalid Value.Select from the Lookup Window</errorMessage>
+            <filterItems>
+                <field>$Source.Type__c</field>
+                <operation>equals</operation>
+                <value>Master</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Marketing_Asset__c</referenceTo>
+        <relationshipLabel>Marketing Assets (Master)</relationshipLabel>
+        <relationshipName>Marketing_Assets1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Media_Placement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>lookup  regarding the online formats</description>
+        <externalId>false</externalId>
+        <label>Media Placement</label>
+        <referenceTo>Media_Placement__c</referenceTo>
+        <relationshipLabel>Marketing Assets</relationshipLabel>
+        <relationshipName>Marketing_Assets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DCP</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Online</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Master</controllingFieldValue>
+                <valueName>DCP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Master</controllingFieldValue>
+                <valueName>Online</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Master</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Localized</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>VAM</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Trade Event</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>VAM__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>VAM</label>
+        <referenceTo>Marketing_Asset__c</referenceTo>
+        <relationshipLabel>Marketing Assets</relationshipLabel>
+        <relationshipName>Marketing_Assets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Marketing Asset</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>MA-{0000}</displayFormat>
+        <label>Marketing Asset Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Marketing Assets</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Embargo_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Embargo_Date_Required</fullName>
+        <active>true</active>
+        <description>Sets embargo date as required if Embargo Status is &apos;With Embargo&apos;</description>
+        <errorConditionFormula>IF( ISPICKVAL( Embargo_Status__c , &quot;With Embargo&quot;) ,  ISBLANK( Embargo_Date__c ) , NULL)</errorConditionFormula>
+        <errorDisplayField>Embargo_Date__c</errorDisplayField>
+        <errorMessage>Embargo Date needs to be Entered</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>online_formats</fullName>
+        <active>true</active>
+        <description>online formats must  have atleast one media placement</description>
+        <errorConditionFormula>IF( ISPICKVAL( Sub_Type__c ,&quot;online&quot;) , ISBLANK( Media_Placement__c ) , null)</errorConditionFormula>
+        <errorMessage>one media placement must  be required</errorMessage>
+    </validationRules>
+</CustomObject>

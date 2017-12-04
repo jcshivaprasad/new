@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Marketing Asset</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketing Assets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Concept --></label>
+        <name>Asset_Concept__c</name>
+        <relationshipLabel><!-- Marketing Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Asset Status --></label>
+        <name>Asset_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available For Trade Event --></label>
+        <name>Available_For_Trade_Event__c</name>
+    </fields>
+    <fields>
+        <label><!-- Embargo Date --></label>
+        <name>Embargo_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Embargo Status --></label>
+        <name>Embargo_Status__c</name>
+        <picklistValues>
+            <masterLabel>Embargo With no further notice</masterLabel>
+            <translation><!-- Embargo With no further notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No embargo</masterLabel>
+            <translation><!-- No embargo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>With Embargo</masterLabel>
+            <translation><!-- With Embargo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Master Asset --></label>
+        <lookupFilter>
+            <errorMessage><!-- Inavalid Value.Select from the Lookup Window --></errorMessage>
+        </lookupFilter>
+        <name>Master_Asset__c</name>
+        <relationshipLabel><!-- Marketing Assets (Master) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Media Placement --></label>
+        <name>Media_Placement__c</name>
+        <relationshipLabel><!-- Marketing Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sub Type --></label>
+        <name>Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>DCP</masterLabel>
+            <translation><!-- DCP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Localized</masterLabel>
+            <translation><!-- Localized --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Master</masterLabel>
+            <translation><!-- Master --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Event</masterLabel>
+            <translation><!-- Trade Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAM</masterLabel>
+            <translation><!-- VAM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- VAM --></label>
+        <name>VAM__c</name>
+        <relationshipLabel><!-- Marketing Assets --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Embargo Date needs to be Entered --></errorMessage>
+        <name>Embargo_Date_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- one media placement must  be required --></errorMessage>
+        <name>online_formats</name>
+    </validationRules>
+</CustomObjectTranslation>

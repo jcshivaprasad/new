@@ -1,0 +1,114 @@
+<apex:page standardController="Title__c" sidebar="false" extensions="T1" showHeader="false">
+    <apex:image value="{!$Resource.banner}" width="100%" height="auto"/>
+<title>Movie Marketing Management</title>
+    <br/>
+    <hr/>
+    <apex:pageBlock >
+    
+    <div align="right">
+    <h1>Welcome {!$User.Alias} User </h1><p1>  ||  </p1>
+    <a href="/secur/logout.jsp" align="right" class="logout">Logout</a></div>
+    </apex:pageBlock>
+    <apex:form >
+        <apex:pageMessages />
+        
+        <apex:pageBlock title="Titles" >
+        <apex:pageBlockTable value="{!acts}" var="Title">
+        <table>
+            <tr>                 
+                <th> <apex:column value="{!Title.Thumbnail__c}"/></th>
+            //</tr>
+            //<tr>
+                <th><apex:column value="{!Title.Name}"/></th>
+            //</tr>
+            //<tr>
+                <th><apex:column value="{!Title.Language__c}"/></th>
+               
+            </tr>
+       
+             
+        </table>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+    <br/>
+    <hr/>
+    <apex:form >
+    
+    <!--<apex:pageblock id = "pb1" >
+            Do You Want To Create New Record : <apex:selectList value="{!selectedRT}" size="1" multiselect="false">
+                <apex:selectOption itemValue="" itemlabel="No"/>
+                <apex:selectOption itemValue="Yes" itemlabel="Yes"/>
+                <apex:actionSupport event="onchange" action="{!onChangeFnCall}" />
+            </apex:selectList>
+        </apex:pageBlock>
+        </apex:form>
+        
+       
+        <apex:form>-->
+        <apex:pageBlock title="Create New Title" >
+        <table>
+            <tr>
+                <th>Name :</th>
+                <td><apex:inputfield required="true" value="{!Title__c.Name}"/></td>
+            </tr>
+            <tr>
+                <th>Language :</th>
+                <td><apex:inputfield value="{!Title__c.Language__c}"/></td>
+            </tr>
+            <tr>
+                <th>Territory:</th>
+                <td><apex:inputField required="false" value="{!Title__c.Territory__c}"/></td>
+            </tr>
+           <!-- <tr>
+                <th>Cast And Crew:</th>
+                <td><apex:inputField required="false" value="{!Title__c.Cast_and_crew__c}"/></td>
+            </tr> -->
+            <tr>
+                <th>Release:</th>
+                <td><apex:inputField required="false" value="{!Title__c.ReleaseId__c}"/></td>
+            </tr>
+            <tr>
+                <th>Genre:</th>
+                <td><apex:inputField required="false" value="{!Title__c.genre__c}"/></td>
+            </tr>
+            <tr>
+                <th>Production End Date:</th>
+                <td><apex:inputField required="False" value="{!Title__c.Production_end_Date__c}"/></td>
+            </tr>
+            <tr>
+                <td><apex:commandButton value="Create" onclick="show_alert()" action="{!save}"/>
+                <apex:commandButton value="Reset Fields" onclick="this.form.reset();return false;"/></td>
+            </tr>
+        </table>
+      
+    </apex:pageBlock>
+      <script type="text/javascript"> 
+function show_alert()
+{
+var msg = "The Record's will get Changed? ";
+alert(msg);
+}
+</script>
+
+    </apex:form>
+    <br/>
+    <hr/>
+    <apex:form >
+        <apex:pageMessages />
+        
+        <apex:pageBlock title="New Creation" >
+        <table>
+            <tr>
+                <td>
+                <apex:commandButton action="{!CastNCrew}" value="Cast and Crew"/>
+                <apex:commandButton action="{!Territories}" value="Territory"/>
+                <apex:commandButton action="{!Release}" value="Release"/>
+                <apex:commandButton action="{!Language}" value="Language"/></td>
+            </tr>
+        </table>
+      
+    </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

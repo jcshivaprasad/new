@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Cast and crew</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cast and crews</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Cast and crews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <relationshipLabel><!-- Cast and crews --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type_del__c</name>
+        <picklistValues>
+            <masterLabel>Actor</masterLabel>
+            <translation><!-- Actor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actress</masterLabel>
+            <translation><!-- Actress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-actor</masterLabel>
+            <translation><!-- Co-actor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Director</masterLabel>
+            <translation><!-- Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Producer</masterLabel>
+            <translation><!-- Producer --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

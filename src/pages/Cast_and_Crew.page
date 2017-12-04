@@ -1,0 +1,46 @@
+<apex:page standardController="Cast_and_crew__c" sidebar="false" showHeader="false" extensions="T1">
+<apex:image value="{!$Resource.banner}" width="100%" height="auto"/>
+<title>Movie Marketing Management</title>
+    <br/>
+    <hr/>
+    <apex:form >
+        <apex:pageMessages />
+       <apex:pageBlock title="Add Cast and Crew" >
+        <table>
+            <tr>
+                <th>Title:</th>
+                <td><apex:inputField required="true" value="{!Cast_and_crew__c.Title__c}"/></td>
+            </tr>
+            <tr>
+                <th>Contact:</th>
+                <td><apex:inputField required="false" value="{!Cast_and_crew__c.Contact__c}"/></td>
+            </tr>
+            <tr>
+                <th>Type:</th>
+                <td><apex:inputField required="false" value="{!Cast_and_crew__c.Type_del__c}"/></td>
+            </tr>
+            <tr>
+                <td><apex:commandButton value="Create New" onclick="show_alert()" action="{!save}"/>
+                <apex:commandButton value="Reset Fields" onclick="this.form.reset();return false;"/></td>
+            </tr>
+        </table>
+         </apex:pageblock>
+        <script type="text/javascript"> 
+function show_alert()
+{
+var msg = "The Record's will get Changed? ";
+alert(msg);
+}
+</script>
+</apex:form>
+<apex:form >
+        <apex:pageBlock title="Navigate">
+        <td>
+                <apex:commandButton action="{!Title}" value="Home"/>
+             <!--   <apex:commandButton action="{!Release}" value="Release"/>
+                <apex:commandButton action="{!Territories}" value="Territories"/>
+                <apex:commandButton action="{!Language}" value="Language"/> --></td>
+                </apex:pageBlock>
+        </apex:form>
+
+        </apex:page>
